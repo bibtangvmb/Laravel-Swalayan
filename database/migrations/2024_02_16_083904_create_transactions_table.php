@@ -12,14 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->string('nota')->primary();
-            $table->string('id_user')->nullable();
+            $table->id();
+            $table->string('nota');
+            $table->string('id_stuff')->nullable();
             $table->date('date')->nullable();
             $table->string('id_customer')->nullable();
-            $table->double('discount')->default(0);
-            $table->integer('amount')->nullable();
-            $table->double('total')->default(0);
-
+           
             $table->timestamps();
         });
     }
