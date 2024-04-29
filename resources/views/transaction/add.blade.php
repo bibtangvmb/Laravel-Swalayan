@@ -1,9 +1,9 @@
-@extends('template.index')
+@extends('templete.index')
 
-@section('title', 'home')
+@section('title', 'transaction')
 
 @section('content')
 
-    Ini Adalah Halaman add transaction
+ini adalah halaman add transactions
 
 @endsection

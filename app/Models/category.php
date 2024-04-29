@@ -5,21 +5,26 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class category extends Model
+use App\Models\Stuff;
+
+
+class Category extends Model
 {
     use HasFactory;
 
     protected $table = 'categories';
 
-    protected $PrimaryKey = 'id';
-
-    protected $keyType = 'string';
+    protected $primaryKey = 'id';
     
-    protected $fillable = [
+    protected $keyType = 'string';
 
+    protected $fillable = [
         'id',
         'name',
         'status',
     ];
+    public function stuff() {
+        return $this->hasMany(Stuff::class, 'id_stuff', 'id');
+    }
 
 }

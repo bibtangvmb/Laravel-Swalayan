@@ -1,9 +1,9 @@
-@extends('template.index')
+@extends('templete.index')
 
-@section('title', 'home')
+@section('title', 'transaction')
 
 @section('content')
 
-    Ini Adalah Halaman list transaction
+ini adalah halaman list transactions
 
 @endsection
